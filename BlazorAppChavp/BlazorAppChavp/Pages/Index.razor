@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject IJSRuntime JS
 
 <PageTitle>Index</PageTitle>
 
@@ -6,4 +7,63 @@
 
 Welcome to your new app.
 
+<p>@welcomeMessage</p>
+<input @bind="counter" />
+<div>Count @counter</div>
+<button @onclick="ClickCount">Click</button>
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+<Dialog Title="Learn More">
+    Do you want to <i>learn more</i> about Blazor?
+</Dialog>
+
+<p>
+	Enter your birth date:
+	<input @bind="birthdate" @bind:format="dd-MM-yyyy" />
+</p>
+
+<button class="btn btn-primary" @onclick="ChangeFocus">Click me to change focus</button>
+<input @ref=InputField @onfocus="HandleFocus" value="@data" @onkeypress="ProcessKeyPress" @onkeypress:preventDefault/>
+
+--------------------------------------------
+<h1>Text Transformer - Parent</h1>
+<EventCallbackPage OnKeypressCallback="@TransformText" />
+<div>Display callback: @dataDisplay</div>
+@code {
+    private string welcomeMessage = "However you like your pizzas, we can deliver them fast!.";
+    private int counter = 0;
+    private DateTime birthdate { get; set; } = new(2000, 1, 1);
+
+    public async Task ClickCount()
+    {
+        Console.WriteLine(counter);
+        ++counter;
+
+        await JS.InvokeVoidAsync("alert", $"{counter}");
+    }
+
+    private ElementReference InputField;
+    private string data;
+
+    private async Task ChangeFocus()
+    {
+        await InputField.FocusAsync();
+    }
+
+    private async Task HandleFocus()
+    {
+        data = "Received focus";
+    }
+
+    private async Task ProcessKeyPress(KeyboardEventArgs e)
+    {
+        Console.WriteLine(e.Key);
+    }
+
+    private string dataDisplay;
+    private void TransformText(Data.KeyTransformation k)
+    {
+        //k.transformedKey = k.key.ToUpper();
+        dataDisplay += k.key;
+    }
+}

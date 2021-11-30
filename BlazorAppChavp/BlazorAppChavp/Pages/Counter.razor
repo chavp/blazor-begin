@@ -1,4 +1,7 @@
 ﻿@page "/counter"
+@layout MyLayout
+
+@inject BlazorAppChavp.Data.PizzaSalesState SalesState
 
 <PageTitle>Counter</PageTitle>
 
@@ -11,8 +14,25 @@
 @code {
     private int currentCount = 0;
 
-    private void IncrementCount()
+    [Parameter]
+    public int IncrementAmount { get; set; } = 1;
+
+    private void IncrementCount(MouseEventArgs e)
     {
-        currentCount++;
+        if (e.ShiftKey) // Ctrl key pressed as well
+        {
+            currentCount += 5;
+        }
+        else
+        {
+            currentCount++;
+        }
+
+        //currentCount = SalesState.PizzasSoldToday++;
+    }
+
+    protected override void OnInitialized()
+    {
+        currentCount = SalesState.PizzasSoldToday;
     }
 }

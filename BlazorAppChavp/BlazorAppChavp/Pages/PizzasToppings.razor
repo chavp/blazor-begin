@@ -1,0 +1,38 @@
+﻿@page "/pizzas-toppings"
+@page "/pizzas-toppings2"
+@inject NavigationManager NavManager
+@inject BlazorAppChavp.Data.PizzaSalesState SalesState
+
+<p>Today, we've sold this many pizzas: @SalesState.PizzasSoldToday</p>
+<button @onclick="IncrementSales">Buy a Pizza</button>
+
+<h1>Our Latest Pizzas and Topping</h1>
+
+<Pizza PizzaName="Hawaiian" PizzaDescription="The one with pineapple" />
+
+<PizzaTopping Topping="@(new BlazorAppChavp.Data.PizzaTopping() { Name = "Chilli Sauce", Ingredients = "Three kinds of chilli." })" />
+
+<button class="btn" @onclick="NavigateToPaymentPage">
+	Buy this pizza!
+</button>
+
+<p>
+	URI: @uri
+</p>
+@code {
+	private void IncrementSales()
+	{
+		SalesState.PizzasSoldToday++;
+	}
+
+	private string uri;
+    protected override void OnInitialized()
+	{
+		uri = NavManager.Uri;
+	}
+
+	private void NavigateToPaymentPage()
+	{
+		NavManager.NavigateTo($"buypizza/test");
+	}
+}

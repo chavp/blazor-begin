@@ -1,0 +1,29 @@
+﻿@page "/buypizza/{pizzaname}"
+@using Microsoft.AspNetCore.WebUtilities
+@using Microsoft.Extensions.Primitives
+@inject NavigationManager NavManager
+
+<h3>BuyPizza: @PizzaName, @ToppingName</h3>
+<p>@NavManager.Uri</p>
+<NavLink href=@HomePageURI Match="NavLinkMatch.All">Home Page</NavLink>
+
+@code {
+    public string HomePageURI { get; set; }
+	
+	[Parameter]
+	public string PizzaName { get; set; }
+
+	private string ToppingName { get; set; }
+
+	protected override void OnInitialized()
+	{
+		HomePageURI = NavManager.BaseUri;
+
+		StringValues extraTopping;
+		var uri = NavManager.ToAbsoluteUri(NavManager.Uri);
+		if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("extratopping", out extraTopping))
+		{
+			ToppingName = System.Convert.ToString(extraTopping);
+		}
+	}
+}

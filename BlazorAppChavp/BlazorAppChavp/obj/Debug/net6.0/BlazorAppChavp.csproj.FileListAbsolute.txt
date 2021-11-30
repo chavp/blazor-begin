@@ -597,7 +597,6 @@ E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\bin\Debug\net6.0\ic
 E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\bin\Debug\net6.0\icudt_CJK.dat
 E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\bin\Debug\net6.0\icudt_EFIGS.dat
 E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\bin\Debug\net6.0\icudt_no_CJK.dat
-E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\obj\Debug\net6.0\BlazorAppChavp.csproj.AssemblyReference.cache
 E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\obj\Debug\net6.0\BlazorAppChavp.GeneratedMSBuildEditorConfig.editorconfig
 E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\obj\Debug\net6.0\BlazorAppChavp.AssemblyInfoInputs.cache
 E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\obj\Debug\net6.0\BlazorAppChavp.AssemblyInfo.cs
@@ -813,3 +812,11 @@ E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\obj\Debug\net6.0\Bl
 E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\obj\Debug\net6.0\BlazorAppChavp.dll
 E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\obj\Debug\net6.0\ref\BlazorAppChavp.dll
 E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\obj\Debug\net6.0\BlazorAppChavp.pdb
+E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.dll
+E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll
+E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.dll.gz
+E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll.gz
+E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\bin\Debug\net6.0\Microsoft.AspNetCore.WebUtilities.dll
+E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\bin\Debug\net6.0\Microsoft.Net.Http.Headers.dll
+E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\obj\Debug\net6.0\build-gz\+tyETAKE.gz
+E:\labs\git\chavp\blazor-begin\BlazorAppChavp\BlazorAppChavp\obj\Debug\net6.0\build-gz\FtJyimFv.gz

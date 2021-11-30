@@ -1,0 +1,111 @@
+﻿@using BlazorAppChavp.Data
+@inject PizzaService PizzaSvc
+@inject OrderState OrderState
+@inject HttpClient HttpClient
+
+<div class="main">
+  <h1>Blazing Pizzas</h1>
+  <ul class="pizza-cards">
+    @if (specials != null)
+    {
+      @foreach (var special in specials)
+      {
+        <li @onclick="@(() => OrderState.ShowConfigurePizzaDialog(special))" style="background-image: url('@special.ImageUrl')">
+          <div class="pizza-info">
+          <span class="title">@special.Name</span>
+          @special.Description
+          <span class="price">@special.GetFormattedBasePrice()</span>
+          </div>
+        </li>
+      }
+    }
+  </ul>
+    @if (OrderState.ShowingConfigureDialog)
+    {
+        <ConfigurePizzaDialog
+            Pizza="OrderState.ConfiguringPizza"
+            OnCancel="OrderState.CancelConfigurePizzaDialog"
+            OnConfirm="OrderState.ConfirmConfigurePizzaDialog" />
+        <PizzaApproval PizzaName="@OrderState.ConfiguringPizza.Special.Name"></PizzaApproval>
+    }
+    @if (todaysPizzas == null)
+    {
+     <p>We're finding out what pizzas are available today...</p>
+    }
+    else
+    {
+     <table>
+     <thead>
+      <tr>
+       <th>Pizza Name</th>
+       <th>Description</th>
+       <th>Vegetarian?</th>
+       <th>Vegan?</th>
+       <th>Price</th>
+      </tr>
+     </thead>
+     <tbody>
+      @foreach (var pizza in todaysPizzas)
+      {
+       <tr>
+        <td>@pizza.Name</td>
+        <td>@pizza.Description</td>
+        <td>@pizza.Vegetarian</td>
+        <td>@pizza.Vegan</td>
+        <td>@pizza.Price</td>
+       </tr>
+      }
+     </tbody>
+    </table>
+    }
+
+    <h2>New Pizza: @PizzaName</h2>
+
+<p>@PizzaDescription</p>
+
+</div>
+
+@code {
+    [Parameter]
+    public string PizzaName { get; set; }
+
+    [Parameter]
+    public string PizzaDescription { get; set; } = "The best pizza you've ever tasted.";
+
+    List<PizzaSpecial> specials = new();
+    protected override void OnInitialized()
+    {
+        specials.AddRange(new List<PizzaSpecial>
+      {
+        new PizzaSpecial { Name = "The Baconatorizor", BasePrice =  11.99M, Description = "It has EVERY kind of bacon", ImageUrl="img/pizzas/bacon.jpg"},
+        new PizzaSpecial { Name = "Buffalo chicken", BasePrice =  12.75M, Description = "Spicy chicken, hot sauce and bleu cheese, guaranteed to warm you up", ImageUrl="img/pizzas/meaty.jpg"},
+        new PizzaSpecial { Name = "Veggie Delight", BasePrice =  11.5M, Description = "It's like salad, but on a pizza", ImageUrl="img/pizzas/salad.jpg"},
+        new PizzaSpecial { Name = "Margherita", BasePrice =  9.99M, Description = "Traditional Italian pizza with tomatoes and basil", ImageUrl="img/pizzas/margherita.jpg"},
+        new PizzaSpecial { Name = "Basic Cheese Pizza", BasePrice =  11.99M, Description = "It's cheesy and delicious. Why wouldn't you want one?", ImageUrl="img/pizzas/cheese.jpg"},
+        new PizzaSpecial { Name = "Classic pepperoni", BasePrice =  10.5M, Description = "It's the pizza you grew up with, but Blazing hot!", ImageUrl="img/pizzas/pepperoni.jpg" }               
+      });
+    }
+
+    private BlazorAppChavp.Data.Pizza[] todaysPizzas;
+
+    BlazorAppChavp.Data.Pizza configuringPizza;
+    bool showingConfigureDialog;
+    void ShowConfigurePizzaDialog(PizzaSpecial special)
+    {
+        configuringPizza = new BlazorAppChavp.Data.Pizza()
+        {
+            Special = special,
+            SpecialId = special.Id,
+            Size = BlazorAppChavp.Data.Pizza.DefaultSize
+        };
+
+        showingConfigureDialog = true;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        todaysPizzas = await PizzaSvc.GetPizzasAsync();
+
+        //var response = await HttpClient.PostAsJsonAsync(NavigationManager.BaseUri + "orders", OrderState.Order);
+    }
+}

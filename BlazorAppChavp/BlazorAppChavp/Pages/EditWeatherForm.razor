@@ -1,0 +1,56 @@
+﻿<EditForm Model=CurrentForecast>
+    <DataAnnotationsValidator />
+	<ValidationSummary />
+    <form>
+        <InputDate @bind-Value=CurrentForecast.Date></InputDate>
+
+        <InputNumber @bind-Value=CurrentForecast.TemperatureC></InputNumber>
+
+        <InputText id="summary" @bind-Value=CurrentForecast.Summary></InputText>
+        <ValidationMessage For="@(() => CurrentForecast.Summary)" />
+    </form>
+</EditForm>
+
+@code {
+    [Parameter]
+    public Data.WeatherForecast CurrentForecast { get; set; }
+
+    private EditContext editContext;
+    protected override void OnInitialized()
+    {
+        editContext = new(CurrentForecast);
+        //editContext.OnFieldChanged += HandleFieldChanged;
+    }  
+
+    private void HandleFieldChanged(object sender, FieldChangedEventArgs e)
+    {
+        editContext.Validate();
+    }
+
+    private async Task ValidateData(EditContext editContext)
+    {
+        var model = editContext.Model as Data.WeatherForecast;
+        if (model is null)
+        {
+            return;
+        }
+        Console.WriteLine(model.Summary);
+    }
+
+    //private async Task  HandleSubmission(EditContext context)
+    //{
+    //    bool dataIsValid = context.Validate();
+
+    //    Console.WriteLine("HandleSubmission");
+
+    //    if (dataIsValid)
+    //    {
+    //        // Store valid data here
+    //    }
+    //}
+
+    //private async Task  InvalidSubmit(EditContext context)
+    //{
+    //    Console.WriteLine("InvalidSubmit");
+    //}
+}

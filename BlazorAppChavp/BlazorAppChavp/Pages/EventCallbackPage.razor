@@ -1,0 +1,18 @@
+﻿@* TextDisplay component *@
+
+<p>Enter text:</p>
+<input @onkeypress="HandleKeypress" value="@data" />
+
+@code {
+    [Parameter]
+    public EventCallback<Data.KeyTransformation> OnKeypressCallback { get; set; }
+
+    private string data;
+
+    private async Task HandleKeypress(KeyboardEventArgs e)
+    {
+        Data.KeyTransformation t = new Data.KeyTransformation() { key = e.Key };
+        await OnKeypressCallback.InvokeAsync(t);
+        data += t.transformedKey;
+    }
+}

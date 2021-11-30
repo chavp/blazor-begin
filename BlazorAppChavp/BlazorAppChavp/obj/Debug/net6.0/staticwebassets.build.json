@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "F3BOYqxxcBJar9+rzqhxH8s8b5mLBxy1fVvgqbM5AJ8=",
+  "Hash": "KrlmLC7kCEhacXllVS/haMpxo8VAakfju4qCOTUq7Zk=",
   "Source": "BlazorAppChavp",
   "BasePath": "/",
   "Mode": "Root",
@@ -306,6 +306,23 @@
       "OriginalItemSpec": "C:\\Users\\parinya\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.0\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
+      "Identity": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.dll",
+      "SourceId": "BlazorAppChavp",
+      "SourceType": "Computed",
+      "ContentRoot": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\parinya\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\lib\\netstandard2.0\\Microsoft.AspNetCore.WebUtilities.dll"
+    },
+    {
       "Identity": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.CSharp.dll",
       "SourceId": "BlazorAppChavp",
       "SourceType": "Computed",
@@ -593,6 +610,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\parinya\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.0\\lib\\net6.0\\Microsoft.JSInterop.WebAssembly.dll"
+    },
+    {
+      "Identity": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.dll",
+      "SourceId": "BlazorAppChavp",
+      "SourceType": "Computed",
+      "ContentRoot": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\parinya\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\lib\\netstandard2.0\\Microsoft.Net.Http.Headers.dll"
     },
     {
       "Identity": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.VisualBasic.Core.dll",
@@ -3519,6 +3553,23 @@
       "OriginalItemSpec": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Runtime.CompilerServices.VisualC.dll"
     },
     {
+      "Identity": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\obj\\Debug\\net6.0\\build-gz\\+tyETAKE.gz",
+      "SourceId": "BlazorAppChavp",
+      "SourceType": "Computed",
+      "ContentRoot": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.dll"
+    },
+    {
       "Identity": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\obj\\Debug\\net6.0\\build-gz\\+Zj1SBkj.gz",
       "SourceId": "BlazorAppChavp",
       "SourceType": "Computed",
@@ -4690,6 +4741,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Linq.dll"
+    },
+    {
+      "Identity": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\obj\\Debug\\net6.0\\build-gz\\FtJyimFv.gz",
+      "SourceId": "BlazorAppChavp",
+      "SourceType": "Computed",
+      "ContentRoot": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.dll"
     },
     {
       "Identity": "E:\\labs\\git\\chavp\\blazor-begin\\BlazorAppChavp\\BlazorAppChavp\\obj\\Debug\\net6.0\\build-gz\\fy1QL61U.gz",
